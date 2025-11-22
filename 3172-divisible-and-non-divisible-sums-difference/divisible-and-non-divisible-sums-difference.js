@@ -4,17 +4,9 @@
  * @return {number}
  */
 var differenceOfSums = function(n, m) {
-    let num1 = 0;
-    let num2 = 0;
+    let total_sum = n * (n + 1) / 2 ;
+    let count_multiple = Math.floor(n/m)
+    let div_sum = m * (count_multiple * ( count_multiple +1 )/2)
 
-    for(i = 1; i <= n; i++){
-        if(i % m !== 0){
-            num1+=i
-        }
-        if(i % m === 0){
-            num2+=i
-        }
-    }
-
-    return num1 - num2
+    return total_sum - (2*div_sum)
 };
